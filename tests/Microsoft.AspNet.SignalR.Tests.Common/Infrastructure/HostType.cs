@@ -2,7 +2,6 @@
 {
     public enum HostType
     {
-        IISExpress,
         Memory,
         Owin
     }

@@ -83,17 +83,13 @@
     <Compile Include="ServerStream.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.AspNet.SignalR.Client45\Microsoft.AspNet.SignalR.Client45.csproj">
-      <Project>{50f8a174-695e-498c-b105-bdbe6b398646}</Project>
-      <Name>Microsoft.AspNet.SignalR.Client45</Name>
+    <ProjectReference Include="..\Microsoft.AspNet.SignalR.Client\Microsoft.AspNet.SignalR.Client.csproj">
+      <Project>{EB46B9C6-EE37-48F9-835E-E49580E40E0A}</Project>
+      <Name>Microsoft.AspNet.SignalR.Client</Name>
     </ProjectReference>
     <ProjectReference Include="..\Microsoft.AspNet.SignalR.Core\Microsoft.AspNet.SignalR.Core.csproj">
       <Project>{1B9A82C4-BCA1-4834-A33E-226F17BE070B}</Project>
       <Name>Microsoft.AspNet.SignalR.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Microsoft.AspNet.SignalR.Owin45\Microsoft.AspNet.SignalR.Owin45.csproj">
-      <Project>{45892477-ef4e-4f45-a431-822755a38ea0}</Project>
-      <Name>Microsoft.AspNet.SignalR.Owin45</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

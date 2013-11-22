@@ -95,15 +95,12 @@
     <Compile Include="Json\JsonFacts.cs" />
     <Compile Include="Json\JsonNetSerializerFacts.cs" />
     <Compile Include="Client\KeepAliveFacts.cs" />
-    <Compile Include="Owin\ServerRequestFacts.cs" />
     <Compile Include="PersistentConnectionFactoryFacts.cs" />
     <Compile Include="PersistentConnectionFacts.cs" />
     <Compile Include="PersistentResponseFacts.cs" />
     <Compile Include="PrefixMatcherFacts.cs" />
     <Compile Include="BufferTextWriterFacts.cs" />
-    <Compile Include="RouteExtensionsTest.cs" />
     <Compile Include="Server\AckHandlerFacts.cs" />
-    <Compile Include="Server\ServiceBusConfigurationFacts.cs" />
     <Compile Include="Server\DiffSetFacts.cs" />
     <Compile Include="Server\Hubs\HubDispatcherFacts.cs" />
     <Compile Include="Server\MessageResultExtensions.cs" />
@@ -124,7 +121,6 @@
     <Compile Include="Server\TestSubscriber.cs" />
     <Compile Include="Server\TopicFacts.cs" />
     <Compile Include="Server\Transports\ForeverTransportFacts.cs" />
-    <Compile Include="Owin\WebSocketFacts.cs" />
     <Compile Include="SipHashBasedStringEqualityComparerFacts.cs" />
     <Compile Include="StringMinifierFacts.cs" />
     <Compile Include="TaskQueueFacts.cs" />
@@ -135,27 +131,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.Client\Microsoft.AspNet.SignalR.Client.csproj">
-      <Project>{eb46b9c6-ee37-48f9-835e-e49580e40e0a}</Project>
+      <Project>{EB46B9C6-EE37-48F9-835E-E49580E40E0A}</Project>
       <Name>Microsoft.AspNet.SignalR.Client</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.Core\Microsoft.AspNet.SignalR.Core.csproj">
       <Project>{1b9a82c4-bca1-4834-a33e-226f17be070b}</Project>
       <Name>Microsoft.AspNet.SignalR.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.Owin45\Microsoft.AspNet.SignalR.Owin45.csproj">
-      <Project>{45892477-ef4e-4f45-a431-822755a38ea0}</Project>
-      <Name>Microsoft.AspNet.SignalR.Owin45</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.ServiceBus\Microsoft.AspNet.SignalR.ServiceBus.csproj">
-      <Project>{3da5e69c-ba4c-4ec1-9fde-688a1bc34b17}</Project>
-      <Name>Microsoft.AspNet.SignalR.ServiceBus</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.SystemWeb\Microsoft.AspNet.SignalR.SystemWeb.csproj">
-      <Project>{37c04b69-0989-458a-b80c-a1ed574adbe4}</Project>
-      <Name>Microsoft.AspNet.SignalR.SystemWeb</Name>
+    <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.Owin\Microsoft.AspNet.SignalR.Owin.csproj">
+      <Project>{2B8C6DAD-4D85-41B1-83FD-248D9F347522}</Project>
+      <Name>Microsoft.AspNet.SignalR.Owin</Name>
     </ProjectReference>
     <ProjectReference Include="..\Microsoft.AspNet.SignalR.Tests.Common\Microsoft.AspNet.SignalR.Tests.Common.csproj">
-      <Project>{f18a8896-10bd-469e-9aa1-aebacef4d7b7}</Project>
+      <Project>{F18A8896-10BD-469E-9AA1-AEBACEF4D7B7}</Project>
       <Name>Microsoft.AspNet.SignalR.Tests.Common</Name>
     </ProjectReference>
   </ItemGroup>

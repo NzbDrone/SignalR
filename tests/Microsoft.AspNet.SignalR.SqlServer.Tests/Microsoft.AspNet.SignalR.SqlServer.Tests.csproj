@@ -62,10 +62,6 @@
       <Project>{1b9a82c4-bca1-4834-a33e-226f17be070b}</Project>
       <Name>Microsoft.AspNet.SignalR.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Microsoft.AspNet.SignalR.SqlServer\Microsoft.AspNet.SignalR.SqlServer.csproj">
-      <Project>{efcf27ec-cb9b-4f3a-91be-154b8ab5b5e0}</Project>
-      <Name>Microsoft.AspNet.SignalR.SqlServer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\src\Common\Microsoft.AspNet.SignalR.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
