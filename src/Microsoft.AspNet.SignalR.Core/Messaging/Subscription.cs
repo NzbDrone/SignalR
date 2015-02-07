@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Threading;
@@ -269,7 +268,7 @@ namespace Microsoft.AspNet.SignalR.Messaging
                 // if the client is very slow then this invoke call might not end quickly and this will make the CPU
                 // hot waiting for the task to return.
 
-                var spinWait = new SpinWait();
+                int disposeRetryCount = 0;
 
                 while (true)
                 {
@@ -279,7 +278,7 @@ namespace Microsoft.AspNet.SignalR.Messaging
                                                             SubscriptionState.Idle);
 
                     // If we're not working then stop
-                    if (state != SubscriptionState.InvokingCallback)
+                    if (state != SubscriptionState.InvokingCallback || disposeRetryCount ++ > 10)
                     {
                         if (state != SubscriptionState.Disposed)
                         {
@@ -297,7 +296,7 @@ namespace Microsoft.AspNet.SignalR.Messaging
                         break;
                     }
 
-                    spinWait.SpinOnce();
+                    Thread.Sleep(500);
                 }
             }
         }

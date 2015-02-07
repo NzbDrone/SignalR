@@ -6,8 +6,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR.Json;
 using Microsoft.AspNet.SignalR.Messaging;
@@ -234,6 +233,18 @@ namespace Microsoft.AspNet.SignalR.Infrastructure
                                                   else if (message.IsCommand)
                                                   {
                                                       var command = _serializer.Parse<Command>(message.Value, message.Encoding);
+
+                                                      if (command == null)
+                                                      {
+                                                          var platform = (int)Environment.OSVersion.Platform;
+                                                          if (platform == 4 || platform == 6 || platform == 128)
+                                                          {
+                                                              return;
+                                                          }
+
+                                                          throw new SerializationException("Couldn't parse message " + message.Value);
+                                                      }
+
                                                       ProcessCommand(command);
 
                                                       // Only send the ack if this command is waiting for it
